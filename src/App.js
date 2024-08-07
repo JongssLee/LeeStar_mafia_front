@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { w3cwebsocket as W3CWebSocket } from "websocket";
-
+import { backendUrl } from './config';
 let client;
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
   const [players, setPlayers] = useState([]);
 
   const connectWebSocket = useCallback(() => {
-    client = new W3CWebSocket('ws://localhost:8000/ws/' + Math.random().toString(36).substr(2, 9));
+    client = new W3CWebSocket(`ws://${backendUrl.replace(/^http:\/\//, '')}/ws/` + Math.random().toString(36).substr(2, 9));
 
     client.onopen = () => {
       console.log('WebSocket Client Connected');
