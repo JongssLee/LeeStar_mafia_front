@@ -135,7 +135,7 @@ function App() {
       <div className="flex items-center justify-center h-screen bg-gray-100">
         {renderHeader()}
         <div className="bg-white p-8 rounded-lg shadow-md">
-          <h1 className="text-2xl font-bold mb-6 text-center text-gray-800">마피아 게임</h1>
+          <h1 className="text-2xl font-bold mb-6 text-center text-gray-800">라이어 게임</h1>
           <button 
             onClick={createRoom}
             className="w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 transition duration-200 mb-4"
@@ -192,7 +192,7 @@ function App() {
       {renderHeader()}
       <div className="bg-white p-8 rounded-lg shadow-md text-center">
         <h2 className="text-2xl font-bold mb-4 text-gray-800">게임 시작!</h2>
-        <p className="text-xl mb-2">당신의 역할: <span className="font-bold text-blue-600">{role === 'mafia' ? '마피아' : '시민'}</span></p>
+        <p className="text-xl mb-2">당신의 역할: <span className="font-bold text-blue-600">{role === 'mafia' ? '라이어' : '시민'}</span></p>
         <p className="text-xl mb-2">카테고리: <span className="font-bold text-green-600">{category}</span></p>
         {role === 'citizen' && <p className="text-lg">항목: <span className="font-bold text-purple-600">{item}</span></p>}
       </div>
