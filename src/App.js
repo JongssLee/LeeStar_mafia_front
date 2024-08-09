@@ -15,7 +15,8 @@ function App() {
   const [players, setPlayers] = useState([]);
 
   const connectWebSocket = useCallback(() => {
-    client = new W3CWebSocket(`ws://${backendUrl.replace(/^http:\/\//, '')}/ws/` + Math.random().toString(36).substr(2, 9));
+    client = new W3CWebSocket('ws://backend:8000/ws/' + Math.random().toString(36).substr(2, 9));
+
 
     client.onopen = () => {
       console.log('WebSocket Client Connected');
