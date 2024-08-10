@@ -15,7 +15,7 @@ function App() {
   const [players, setPlayers] = useState([]);
 
   const connectWebSocket = useCallback(() => {
-    client = new W3CWebSocket('ws://game_backend:8100/ws/' + Math.random().toString(36).substr(2, 9));
+    client = new W3CWebSocket('/ws' + Math.random().toString(36).substr(2, 9));
 
 
     client.onopen = () => {
